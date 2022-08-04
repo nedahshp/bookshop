@@ -1,0 +1,10 @@
+{% extends "registration/_base.html" %}
+
+{% block content %}
+ <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">ذخیره</button>
+    </form>
+    <a href="{% url 'Book_List' %}">لیست همه کتاب ها</a>
+{% endblock %}

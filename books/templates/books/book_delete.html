@@ -1,0 +1,10 @@
+{% extends "registration/_base.html" %}
+
+{% block content %}
+ <form action="" method="post">
+    {% csrf_token %}
+    <p> ایا از حذف {{ books.title }} مطمین هستید؟</p>
+     <input type="submit" value="بله">
+    </form>
+    <a href="{% url 'Book_List' %}">لیست همه کتاب ها</a>
+{% endblock %}
